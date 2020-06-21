@@ -1,0 +1,1 @@
+Tell what archaeology is and explain to your neighbor how it differs or relates to other fields of study such as anthropology, geology, paleontology, and history. Explain how archaeology is different than artifact collecting or treasure hunting.

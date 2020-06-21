@@ -1,0 +1,110 @@
+.stamp {
+  background: #fff;
+  border-radius: 50%;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  > div {
+    position: absolute;
+  }
+
+  .contain-flag {
+    transform: translate(38px, -109px) scale(0.1, 0.1) rotate(20deg);
+  }
+
+  &:nth-child(odd) {
+    margin-top: 70px;
+  }
+
+  &:nth-child(even):before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 15px;
+    border-top: 15px solid #fff;
+    transform: translateY(76px) translateX(0px) rotate(-42deg);
+  }
+
+  &:nth-child(even):after {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 15px;
+    border-top: 15px solid #fff;
+    transform: translateY(77px) translateX(85px) rotate(45deg);
+  }
+
+  &:nth-child(even):last-child:after {
+    border-top: 0px;
+  }
+
+  &:only-child {
+    margin: 0px;
+  }
+}
+
+.isActive {
+  .stamp {
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    &:nth-child(odd) {
+      margin-top: 0px;
+    }
+
+    &:nth-child(even):before {
+      width: 19px;
+      transform: translateY(45px) translateX(-17px) rotate(0deg);
+    }
+
+    &:nth-child(even):after {
+      width: 19px;
+      transform: translateY(45px) translateX(99px) rotate(0deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .stamp {
+    width: 40px;
+    height: 40px;
+
+    &:nth-child(odd) {
+      margin-top: 40px;
+    }
+
+    &:nth-child(even):before {
+      width: 15px;
+      border-top: 5px solid #fff;
+      transform: translateY(36px) translateX(0px) rotate(-42deg);
+    }
+
+    &:nth-child(even):after {
+      width: 15px;
+      border-top: 5px solid #fff;
+      transform: translateY(36px) translateX(23px) rotate(45deg);
+    }
+
+    .contain-flag {
+      transform: translate(8px, -131px) scale(0.08, 0.08) rotate(20deg);
+    }
+  }
+
+  .isActive {
+    .stamp {
+      &:nth-child(even):before {
+        width: 19px;
+        transform: translateY(17px) translateX(-18px) rotate(0deg);
+      }
+
+      &:nth-child(even):after {
+        width: 19px;
+        transform: translateY(17px) translateX(38px) rotate(0deg);
+      }
+    }
+  }
+}

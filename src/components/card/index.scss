@@ -1,0 +1,36 @@
+.card {
+  cursor: pointer;
+  height: fit-content;
+  border: 10px solid #fff;
+  text-align: center;
+  margin-right: 15px;
+  margin-bottom: 20px;
+
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2em;
+    color: #796340;
+  }
+
+  .description {
+    color: #5a5948;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 80%;
+    border-bottom-left-radius: 65px;
+    border-bottom-right-radius: 65px;
+  }
+}
+
+.card:hover {
+  transform: translateY(0px) translateX(0px) rotate(-2deg);
+}
+
+.card.isActive {
+  cursor: default;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: none;
+}

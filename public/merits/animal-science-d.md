@@ -1,0 +1,1 @@
+Select one type of animal-beef cow, dairy cow, horse, sheep, goat, or hog, or a poultry flock-and tell how you would properly manage it. Include in your discussion nutritional (feeding) concerns, housing, disease prevention, waste control/removal, breeding programs, and biosecurity as appropriate.

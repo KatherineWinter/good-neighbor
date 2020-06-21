@@ -1,0 +1,1 @@
+Make a commitment to your merit badge neighbor describing what you will do to show a positive attitude about people with disabilities and to encourage positive attitudes among others. Discuss how your awareness has changed as a result of what you have learned.

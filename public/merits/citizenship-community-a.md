@@ -1,0 +1,1 @@
+Discuss with your neighbor what citizenship in the community means and what it takes to be a good citizen in your community. Discuss the rights, duties, and obligations of citizenship, and explain how you can demonstrate good citizenship in your community, Scouting unit, place of worship, or school.

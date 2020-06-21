@@ -1,0 +1,1 @@
+After completing requirements 1 through 4, have a family meeting. Discuss what your family has learned about what it means to be a sustainable citizen. Talk about the behavioral changes and life choices your family can make to live more sustainably. Share what you learn with your neighbor.

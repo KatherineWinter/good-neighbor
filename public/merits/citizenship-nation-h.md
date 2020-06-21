@@ -1,0 +1,1 @@
+Name your two senators and the member of Congress from your congressional district. Write a letter about a national issue and send it to one of these elected officials, sharing your view with him or her. Show your letter and any response you receive to your neighbor.

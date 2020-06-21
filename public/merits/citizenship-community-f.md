@@ -1,0 +1,1 @@
+List some of the services (such as the library, recreation center, public transportation, and public safety) your community provides that are funded by taxpayers. Tell your neighbor why these services are important to your community.

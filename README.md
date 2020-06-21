@@ -1,2 +1,15 @@
-# good-neighbor
-Good Neighbor is shameless rip of Animal Crossing 'Nook Miles' and 'Boy Scouts of America' merits badges.  It was inspired by Mr Rogers. It is a guide to become more involved in your local community.
+A shameless rip of Animal Crossing 'Nook Miles' and 'Boy Scouts of America' merits badges.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm install && npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.

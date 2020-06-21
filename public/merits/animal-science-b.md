@@ -1,0 +1,1 @@
+List five diseases that afflict the animals in each of the classifications in requirement 1. Also list five diseases of poultry. Describe the symptoms of each disease and explain how each is contracted and how it could be prevented.

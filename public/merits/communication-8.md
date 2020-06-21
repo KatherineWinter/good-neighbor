@@ -1,0 +1,1 @@
+Plan a troop or crew court of honor, campfire program, or an interfaith worship service. Have the patrol leaders' council approve it, then write the script and prepare the program. Serve as master of ceremonies.

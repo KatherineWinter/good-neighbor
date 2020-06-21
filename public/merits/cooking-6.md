@@ -1,0 +1,8 @@
+Trail and backpacking meals. Do the following:
+
+1. Using the MyPlate food guide or the current USDA nutrition model, plan a menu for trail hiking or backpacking that includes one breakfast, one lunch, one dinner, and one snack. These meals must not require refrigeration and are to be consumed by three to five people (including you). Be sure to keep in mind any special needs (such as food allergies) and how you will keep your foods safe and free from cross-contamination. List the equipment and utensils needed to prepare and serve these meals.
+1. Create a shopping list for your meals, showing the amount of food needed to prepare and serve each meal, and the cost for each meal.
+1. Share and discuss your meal plan and shopping list with your neighbor. Your plan must include how to repackage foods for your hike or backpacking trip to eliminate as much bulk, weight, and garbage as possible.
+1. While on a trail hike or backpacking trip, prepare and serve two meals and a snack from the menu planned for this requirement. At least one of those meals must be cooked over a fire, or an approved trail stove (with proper supervision).\*\*
+1. After each meal, have those you served evaluate the meal on presentation and taste, then evaluate your own meal. Discuss what you learned with your neighbor, including any adjustments that could have improved or enhanced your meals. Tell how planning and preparation help ensure successful trail hiking or backpacking meals.
+1. Discuss how you followed the Outdoor Code and no-trace principles during your outing. Explain to your neighbor how you cleaned any equipment, utensils, and the cooking site after each meal. Explain how you properly disposed of any dishwater and packed out all garbage.

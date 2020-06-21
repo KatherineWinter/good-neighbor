@@ -1,0 +1,6 @@
+Do TWO of the following:
+
+1. Attend a live performance, or listen to three hours of recordings from any two of the following musical styles: blues, jazz, classical, country, bluegrass, ethnic, gospel, musical theater, opera. Describe the sound of the music and the instruments used. Identify the composers or songwriters, the performers, and the titles of the pieces you heard. If it was a live performance, describe the setting and the reaction of the audience. Discuss your thoughts about the music.
+1. Interview an adult member of your family about music. Find out what the most popular music was when he or she was your age. Find out what his or her favorite music is now, and listen to three of your relative's favorite tunes with him or her. How do those favorites sound to you? Had you ever heard any of them? Play three of your favorite songs for your relative, and explain why you like these songs. Ask what he or she thinks of your favorite music.
+1. Serve for six months as a member of a school band, choir, or other organized musical group, or perform as a soloist in public six times.
+1. List five people who are important in the history of American music and explain to your neighbor why they continue to be influential. Include at least one composer, one performer, one innovator, and one person born more than 100 years ago.

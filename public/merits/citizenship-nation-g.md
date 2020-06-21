@@ -1,0 +1,1 @@
+Name the three branches of our federal government and explain to your neighbor their functions. Explain how citizens are involved in each branch. For each branch of government, explain the importance of the system of checks and balances.

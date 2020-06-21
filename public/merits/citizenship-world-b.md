@@ -1,0 +1,1 @@
+Explain how one becomes a citizen in the United States, and explain the rights, duties, and obligations of U.S. citizenship. Discuss the similarities and differences between the rights, duties, and obligations of U.S. citizens and the citizens of two other countries.

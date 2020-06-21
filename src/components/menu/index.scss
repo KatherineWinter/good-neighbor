@@ -1,0 +1,29 @@
+.menu {
+  $borderColor: #b8d5ff;
+  $borderRadius: 50px;
+  cursor: pointer;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid $borderColor;
+  font-size: 1em;
+
+  li {
+    display: block;
+    color: #fff;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #899eff;
+    border-bottom: 3px solid $borderColor;
+    border-radius: $borderRadius;
+  }
+
+  li:hover {
+    background-color: #82dde2; //#83dde5
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+}

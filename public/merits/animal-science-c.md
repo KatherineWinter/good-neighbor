@@ -1,0 +1,1 @@
+Explain the differences in the digestive systems of ruminants, horses, pigs, and poultry. Explain how the differences in structure and function among these types of digestive tracts affect the nutritional management of these species.

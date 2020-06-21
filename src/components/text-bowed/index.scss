@@ -1,0 +1,48 @@
+// https://gist.github.com/chriseppstein/8615d6dc847e10c72fe5
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin rotated-text(
+  $num-letters: 100,
+  $angle-span: 180deg,
+  $angle-offset: 0deg
+) {
+  $angle-per-char: $angle-span / $num-letters;
+  @for $i from 1 through $num-letters {
+    .char#{$i} {
+      @include transform(rotate($angle-offset + $angle-per-char * $i));
+    }
+  }
+}
+
+.text-bowed {
+  position: absolute;
+  transform: rotate(0.83turn);
+  @include rotated-text(10);
+
+  > div {
+    display: inline-block;
+    height: 60px;
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 0;
+    transform-origin: bottom center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-bowed {
+    > div {
+      height: 40px;
+    }
+  }
+}

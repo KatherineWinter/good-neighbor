@@ -1,0 +1,1 @@
+Name five professions that provide services to people with disabilities. Pick one that interests you and find out the education, training, and experience required for this profession. Discuss what you learn with your neighbor, and tell why this profession interests you.

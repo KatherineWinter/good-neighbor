@@ -1,0 +1,76 @@
+.contain-flag {
+  $background-color: #c4edf7;
+
+  position: relative;
+
+  .pole {
+    background-color: gray;
+    border: 1px solid #636262;
+    border-radius: 10px;
+    width: 10px;
+    height: 300px;
+  }
+
+  // Pole Top
+  .pole:before {
+    position: absolute;
+    top: -14px;
+    left: -5px;
+    display: block;
+    background-color: gray;
+    border-radius: 50%;
+    border: 1px solid #636262;
+    width: 20px;
+    height: 20px;
+    content: '';
+  }
+
+  // Flag part in front
+  .flag {
+    position: absolute;
+    top: 8px;
+    z-index: 10;
+    background-color: #eb573b;
+    border: 1px solid #d64b38;
+    width: 150px;
+    height: 90px;
+  }
+
+  // Between flag pieces
+  .shadow {
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    z-index: 4;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 62px solid #c14333;
+  }
+
+  // Secondary flag half
+  .flag-2 {
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    z-index: 1;
+    background-color: #eb573b;
+    width: 150px;
+    height: 90px;
+  }
+
+  // Negative space triangle effect on end of flag
+  .flag-2:after {
+    position: absolute;
+    left: 100px;
+    top: -15px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid white;
+    content: '';
+  }
+}

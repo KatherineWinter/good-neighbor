@@ -1,0 +1,1 @@
+With your neighbor's approval, develop a plan to teach a skill or inform someone about something. Prepare teaching aids for your plan. Carry out your plan. With your neighbor, determine whether the person has learned what you intended.

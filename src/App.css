@@ -1,0 +1,29 @@
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  width: 100%;
+  min-height: 140px;
+  background-image: url('/border.jpg');
+  background-repeat: repeat-x;
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}

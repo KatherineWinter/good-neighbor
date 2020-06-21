@@ -1,0 +1,1 @@
+With the approval of your neighbor and a parent, watch a movie that shows how the actions of one individual or group of individuals can have a positive effect on a community. Discuss with your neighbor what you learned from the movie about what it means to be a valuable and concerned member of the community.

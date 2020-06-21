@@ -1,0 +1,1 @@
+Discuss and demonstrate the proper elements of a good motion picture. In your discussion, include visual storytelling, rhythm, the 180-axis rule, camera movement, framing and composition of camera shots, and lens selection.

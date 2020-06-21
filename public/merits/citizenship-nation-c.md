@@ -1,0 +1,1 @@
+Watch the national evening news five days in a row OR read the front page of a major daily newspaper five days in a row. Discuss the national issues you learned about with your neighbor. Choose one of the issues and explain how it affects you and your family.

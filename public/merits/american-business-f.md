@@ -1,0 +1,1 @@
+Select a business leader and interview this individual to learn more about his or her company and career path. Discuss the role ethics plays in making business decisions. Share what you have learned with your neighbor.

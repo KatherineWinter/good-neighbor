@@ -1,0 +1,1 @@
+Read about the world around you from any two sources: books, magazines, newspapers, the internet, field manuals, etc. Topics may include the neighborhood, sports, environmental problems, politics, social issues, current events, nature, religion, etc. Discuss what you have learned with your neighbor.

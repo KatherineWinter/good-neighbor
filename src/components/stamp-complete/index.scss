@@ -1,0 +1,28 @@
+.stamp-complete {
+  width: 80px;
+  height: 80px;
+
+  .text-bowed {
+    left: -39px;
+    top: -16px;
+    position: relative;
+  }
+
+  img {
+    width: inherit;
+    height: inherit;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .stamp-complete {
+    width: 35px;
+    height: 35px;
+
+    .text-bowed {
+      left: -31px;
+      top: -7px;
+    }
+  }
+}
