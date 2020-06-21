@@ -66,6 +66,12 @@
 
 @media only screen and (max-width: 800px) {
   .dialog-complete {
-    width: 300px;
+    .dialog {
+      width: 100%;
+
+      h1 {
+        width: 100%;
+      }
+    }
   }
 }

@@ -122,7 +122,7 @@ export default class App extends React.Component {
     this.menuList = [
       {
         title: 'About',
-        callback: () => window.open('/about'),
+        callback: () => window.open('/about.html'),
       },
       {
         title: 'Sign out',

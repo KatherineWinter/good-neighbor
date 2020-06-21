@@ -42,3 +42,20 @@
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .Landing {
+    .hello {
+      .hello-content {
+        h1 {
+          line-height: 1em;
+        }
+
+        button {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
