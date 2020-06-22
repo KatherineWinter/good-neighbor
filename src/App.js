@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from './components/card'
+import { Border } from './components/border'
 import { Points } from './components/points'
 import { Menu } from './components/menu'
 import { DialogComplete } from './components/dialog-complete'
@@ -9,26 +9,16 @@ import { UserSession } from 'blockstack'
 import { Landing } from './components/landing'
 import { ME_FILENAME } from './constants'
 import { getUserScore } from './utils/get-user-score'
+import { getCardsTemplate } from './utils/get-cards-template'
 
 function cardsTemplate() {
-  const cards = merits.map((merit) => {
-    if (this.state.activeId && this.state.activeId !== merit.id) {
-      return null
-    }
-
-    return (
-      <Card
-        key={merit.id}
-        merit={merit}
-        userData={this.state.userData}
-        isActive={!!this.state.activeId}
-        handleCardClick={() => this.setState({ activeId: merit.id })}
-        handleSaveCompletion={handleSaveCompletion.bind(this)}
-      />
-    )
-  })
-
-  return <div className="cards">{cards}</div>
+  const handleCardClick = (merit) => this.setState({ activeId: merit.id })
+  return getCardsTemplate(
+    this.state.activeId,
+    this.state.userData,
+    handleCardClick,
+    handleSaveCompletion.bind(this)
+  )
 }
 
 function closeTemplate() {
@@ -144,6 +134,15 @@ export default class App extends React.Component {
 
   render() {
     if (this.userSession.isUserSignedIn()) {
+      if (!this.state.userData) {
+        return (
+          <div className="App">
+            <Border />
+            {getCardsTemplate()}
+          </div>
+        )
+      }
+
       const dialogComplete = this.state.showCompleteDialog ? (
         <DialogComplete
           score={this.score}
@@ -153,7 +152,7 @@ export default class App extends React.Component {
 
       return (
         <div className="App">
-          <div className="border" />
+          <Border />
           {closeTemplate.call(this)}
           {pointsTemplate.call(this)}
           {cardsTemplate.call(this)}

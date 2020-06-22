@@ -1,10 +1,10 @@
 {
-  "short_name": "Good Neighbor Miles",
-  "name": "Good Neighbor Miles",
+  "short_name": "Good Neighbor",
+  "name": "Good Neighbor",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {

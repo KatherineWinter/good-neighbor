@@ -47,7 +47,7 @@ export class Card extends React.Component {
     const { steps } = this.props.merit || defaultMerit
 
     this.state = {
-      activeIndex: findIncompleteStep(this.props.userData, steps),
+      activeIndex: findIncompleteStep(this.props.userData, steps) || 0,
       article: null,
       articleFile: null,
     }
