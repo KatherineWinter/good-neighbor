@@ -83,8 +83,7 @@ function loadUserData() {
         const userData = JSON.parse(content)
         this.setState({ userData })
       } else {
-        const userData = null
-        this.setState({ userData })
+        this.setState({ userData: null })
       }
     })
     .catch(() => {
@@ -134,15 +133,6 @@ export default class App extends React.Component {
 
   render() {
     if (this.userSession.isUserSignedIn()) {
-      if (!this.state.userData) {
-        return (
-          <div className="App">
-            <Border />
-            {getCardsTemplate()}
-          </div>
-        )
-      }
-
       const dialogComplete = this.state.showCompleteDialog ? (
         <DialogComplete
           score={this.score}
