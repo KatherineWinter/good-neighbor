@@ -212,15 +212,6 @@ export const merits = [
         id: 'archaeology-a',
       },
       {
-        id: 'archaeology-b',
-      },
-      {
-        id: 'archaeology-c',
-      },
-      {
-        id: 'archaeology-d',
-      },
-      {
         id: 'archaeology-e',
       },
       {
@@ -259,24 +250,6 @@ export const merits = [
       },
       {
         id: 'archery-e',
-      },
-      {
-        id: 'archery-f',
-      },
-      {
-        id: 'archery-g',
-      },
-      {
-        id: 'archery-h',
-      },
-      {
-        id: 'archery-i',
-      },
-      {
-        id: 'archery-j',
-      },
-      {
-        id: 'archery-k',
       },
     ],
   },

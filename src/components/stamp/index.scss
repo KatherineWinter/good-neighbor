@@ -49,22 +49,6 @@
 .isActive {
   .stamp {
     cursor: pointer;
-    margin-left: 8px;
-    margin-right: 8px;
-
-    &:nth-child(odd) {
-      margin-top: 0px;
-    }
-
-    &:nth-child(even):before {
-      width: 19px;
-      transform: translateY(45px) translateX(-17px) rotate(0deg);
-    }
-
-    &:nth-child(even):after {
-      width: 19px;
-      transform: translateY(45px) translateX(99px) rotate(0deg);
-    }
   }
 }
 
@@ -91,20 +75,6 @@
 
     .contain-flag {
       transform: translate(8px, -131px) scale(0.08, 0.08) rotate(20deg);
-    }
-  }
-
-  .isActive {
-    .stamp {
-      &:nth-child(even):before {
-        width: 19px;
-        transform: translateY(17px) translateX(-18px) rotate(0deg);
-      }
-
-      &:nth-child(even):after {
-        width: 19px;
-        transform: translateY(17px) translateX(38px) rotate(0deg);
-      }
     }
   }
 }
