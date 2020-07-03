@@ -1,13 +1,14 @@
 import React from 'react'
+import firebaseApp from '@firebase/app'
+import '@firebase/auth'
+import '@firebase/firestore'
 import { Border } from './components/border'
 import { Points } from './components/points'
 import { Menu } from './components/menu'
 import { DialogComplete } from './components/dialog-complete'
 import './App.css'
 import { merits } from './merit'
-import { UserSession } from 'blockstack'
 import { Landing } from './components/landing'
-import { ME_FILENAME } from './constants'
 import { getUserScore } from './utils/get-user-score'
 import { getCardsTemplate } from './utils/get-cards-template'
 
@@ -57,54 +58,54 @@ function closeDialogComplete() {
 
 function handleSaveCompletion(id, score) {
   this.score = score
-  let userData = this.state.userData || []
-  userData.push({
+  this.setState({
+    showCompleteDialog: true,
+  })
+  handleSaveUserData.call(this, id)
+}
+
+function handleSaveUserData(id) {
+  const db = firebaseApp.firestore()
+  db.collection('posts').add({
     id,
+    userEmail: this.userEmail,
     completionDate: Date.now(),
   })
-
-  handleSaveUserData.call(this, userData)
 }
 
-function handleSaveUserData(userData) {
-  this.setState({ userData })
-  this.userSession
-    .putFile(ME_FILENAME, JSON.stringify(userData), { encrypt: false })
-    .finally(() => {
-      this.setState({ showCompleteDialog: true })
+function loadUserData(authData) {
+  const db = firebaseApp.firestore()
+  const meritsRef = db.collection('posts')
+  this.userEmail = authData.user.email
+  const query = meritsRef.where('userEmail', '==', this.userEmail)
+
+  let userData = []
+  query.onSnapshot((data) => {
+    data.forEach((doc) => {
+      userData.push(doc.data())
     })
+    this.setState({ userData })
+  })
 }
 
-function loadUserData() {
-  this.userSession
-    .getFile(ME_FILENAME, { decrypt: false })
-    .then((content) => {
-      if (content) {
-        const userData = JSON.parse(content)
-        this.setState({ userData })
-      } else {
-        this.setState({ userData: null })
-      }
-    })
-    .catch(() => {
-      console.error('user data not found')
-    })
+function handleUserSignedIn(userData) {
+  loadUserData.call(this, userData)
 }
 
 function signOut(e) {
   e.preventDefault()
-  this.userSession.signUserOut()
-  window.location = '/'
+  localStorage.clear()
+  this.setState({ userData: [] })
 }
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
-    this.userSession = new UserSession()
     this.score = 0
+    this.userEmail = null
     this.state = {
       template: 'cards',
-      userData: null,
+      userData: [],
       isMenuVisible: false,
     }
 
@@ -121,18 +122,20 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    const session = this.userSession
-    if (!session.isUserSignedIn() && session.isSignInPending()) {
-      session.handlePendingSignIn().then((userData) => {
-        loadUserData.call(this)
-      })
-    } else {
-      loadUserData.call(this)
-    }
+    firebaseApp.initializeApp({
+      apiKey: process.env.REACT_APP_API_KEY,
+      authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+      databaseURL: process.env.REACT_APP_DATABASE_URL,
+      projectId: process.env.REACT_APP_PROJECT_ID,
+      storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+      messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+      appId: process.env.REACT_APP_APP_ID,
+      measurementId: process.env.REACT_APP_APP_ID,
+    })
   }
 
   render() {
-    if (this.userSession.isUserSignedIn()) {
+    if (this.state.userData.length > 0) {
       const dialogComplete = this.state.showCompleteDialog ? (
         <DialogComplete
           score={this.score}
@@ -151,6 +154,8 @@ export default class App extends React.Component {
       )
     }
 
-    return <Landing />
+    return (
+      <Landing handleUserSignedIn={handleUserSignedIn.bind(this)}></Landing>
+    )
   }
 }
