@@ -97,7 +97,7 @@ function signOut(e) {
   firebaseApp
     .auth()
     .signOut()
-    .then(() => this.setState({ userData: [] }))
+    .then(() => this.setState({ userData: null }))
 }
 
 export default class App extends React.Component {
@@ -107,7 +107,7 @@ export default class App extends React.Component {
     this.userEmail = null
     this.state = {
       template: 'cards',
-      userData: [],
+      userData: null,
       isMenuVisible: false,
     }
 
@@ -137,7 +137,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (this.state.userData.length > 0) {
+    if (this.state.userData) {
       const dialogComplete = this.state.showCompleteDialog ? (
         <DialogComplete
           score={this.score}
