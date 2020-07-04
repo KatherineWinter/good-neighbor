@@ -26,18 +26,32 @@
       }
 
       button {
-        display: inline-block;
+        display: block;
+        text-align: left;
         cursor: pointer;
-        border: 1px solid #5d6ceb;
-        font-size: 2em;
-        text-align: center;
-        color: #fff;
-        background: #4e5fe9;
-        border-radius: 50px;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15) inset,
-          0 6px 10px rgba(0, 0, 0, 0.15);
-        padding: 20px 50px;
+        margin: 10px auto;
+        font-size: 1em;
+        padding: 8px;
+        background-color: #fff;
         outline: none;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Roboto', sans-serif;
+        min-width: 250px;
+        img {
+          width: 18px;
+          height: 18px;
+          margin-right: 24px;
+          vertical-align: middle;
+        }
+      }
+
+      .google {
+        color: #202124;
+      }
+
+      .facebook {
+        color: #1877f2;
       }
     }
   }
@@ -49,11 +63,6 @@
       .hello-content {
         h1 {
           line-height: 1em;
-        }
-
-        button {
-          margin-left: 10px;
-          margin-right: 10px;
         }
       }
     }

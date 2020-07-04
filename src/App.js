@@ -73,10 +73,10 @@ function handleSaveUserData(id) {
   })
 }
 
-function loadUserData(authData) {
+function loadUserData(userEmail) {
   const db = firebaseApp.firestore()
   const meritsRef = db.collection('posts')
-  this.userEmail = authData.user.email
+  this.userEmail = userEmail
   const query = meritsRef.where('userEmail', '==', this.userEmail)
 
   let userData = []
@@ -88,14 +88,16 @@ function loadUserData(authData) {
   })
 }
 
-function handleUserSignedIn(userData) {
-  loadUserData.call(this, userData)
+function handleUserSignedIn(userEmail) {
+  loadUserData.call(this, userEmail)
 }
 
 function signOut(e) {
   e.preventDefault()
-  localStorage.clear()
-  this.setState({ userData: [] })
+  firebaseApp
+    .auth()
+    .signOut()
+    .then(() => this.setState({ userData: [] }))
 }
 
 export default class App extends React.Component {

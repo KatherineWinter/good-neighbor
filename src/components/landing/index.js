@@ -6,13 +6,26 @@ import { getCardsTemplate } from '../../utils/get-cards-template'
 import './index.scss'
 
 export class Landing extends Component {
-  signIn(e) {
+  googleSignIn(e) {
     e.preventDefault()
     const provider = new firebaseApp.auth.GoogleAuthProvider()
     firebaseApp
       .auth()
       .signInWithPopup(provider)
-      .then(this.props.handleUserSignedIn)
+      .then((authInfo) => this.props.handleUserSignedIn(authInfo.user.email))
+      .catch(console.error)
+  }
+
+  facebookSignIn(e) {
+    e.preventDefault()
+    const provider = new firebaseApp.auth.FacebookAuthProvider()
+    provider.addScope('email')
+    firebaseApp
+      .auth()
+      .signInWithPopup(provider)
+      .then((authInfo) => {
+        this.props.handleUserSignedIn(authInfo.user.email)
+      })
       .catch(console.error)
   }
 
@@ -27,8 +40,19 @@ export class Landing extends Component {
         <div className="hello">
           <div className="hello-content">
             <h1>Good Neighbor</h1>
-            <button onClick={this.signIn.bind(this)}>
-              {'Sign in with Google'}
+            <button
+              className="google"
+              onClick={this.googleSignIn.bind(this)}
+            >
+              <img alt="google logo" src="/g-logo.png" />
+              {'Continue with Google'}
+            </button>
+            <button
+              className="facebook"
+              onClick={this.facebookSignIn.bind(this)}
+            >
+              <img alt="facebook logo" src="/f-logo.png" />
+              {'Continue with Facebook'}
             </button>
           </div>
         </div>
