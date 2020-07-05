@@ -456,7 +456,7 @@ export const merits = [
       },
       {
         id: 'communication-7',
-      }
+      },
     ],
   },
   {

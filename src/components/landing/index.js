@@ -30,6 +30,7 @@ export class Landing extends Component {
         <div className="hello">
           <div className="hello-content">
             <h1>Good Neighbor</h1>
+            <div>Get involved in your community</div>
             <button className="google" onClick={this.googleSignIn.bind(this)}>
               <img alt="google logo" src="/g-logo.png" />
               {'Continue with Google'}
