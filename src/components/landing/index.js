@@ -9,24 +9,14 @@ export class Landing extends Component {
   googleSignIn(e) {
     e.preventDefault()
     const provider = new firebaseApp.auth.GoogleAuthProvider()
-    firebaseApp
-      .auth()
-      .signInWithPopup(provider)
-      .then((authInfo) => this.props.handleUserSignedIn(authInfo.user.email))
-      .catch(console.error)
+    firebaseApp.auth().signInWithPopup(provider).catch(console.error)
   }
 
   facebookSignIn(e) {
     e.preventDefault()
     const provider = new firebaseApp.auth.FacebookAuthProvider()
     provider.addScope('email')
-    firebaseApp
-      .auth()
-      .signInWithPopup(provider)
-      .then((authInfo) => {
-        this.props.handleUserSignedIn(authInfo.user.email)
-      })
-      .catch(console.error)
+    firebaseApp.auth().signInWithPopup(provider).catch(console.error)
   }
 
   render() {
@@ -40,10 +30,7 @@ export class Landing extends Component {
         <div className="hello">
           <div className="hello-content">
             <h1>Good Neighbor</h1>
-            <button
-              className="google"
-              onClick={this.googleSignIn.bind(this)}
-            >
+            <button className="google" onClick={this.googleSignIn.bind(this)}>
               <img alt="google logo" src="/g-logo.png" />
               {'Continue with Google'}
             </button>

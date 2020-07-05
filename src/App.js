@@ -88,16 +88,9 @@ function loadUserData(userEmail) {
   })
 }
 
-function handleUserSignedIn(userEmail) {
-  loadUserData.call(this, userEmail)
-}
-
 function signOut(e) {
   e.preventDefault()
-  firebaseApp
-    .auth()
-    .signOut()
-    .then(() => this.setState({ userData: null }))
+  firebaseApp.auth().signOut()
 }
 
 export default class App extends React.Component {
@@ -134,6 +127,14 @@ export default class App extends React.Component {
       appId: process.env.REACT_APP_APP_ID,
       measurementId: process.env.REACT_APP_APP_ID,
     })
+
+    firebaseApp.auth().onAuthStateChanged((user) => {
+      if (user) {
+        loadUserData.call(this, user.email)
+      } else {
+        this.setState({ userData: null })
+      }
+    })
   }
 
   render() {
@@ -156,8 +157,6 @@ export default class App extends React.Component {
       )
     }
 
-    return (
-      <Landing handleUserSignedIn={handleUserSignedIn.bind(this)}></Landing>
-    )
+    return <Landing></Landing>
   }
 }
