@@ -456,10 +456,7 @@ export const merits = [
       },
       {
         id: 'communication-7',
-      },
-      {
-        id: 'communication-8',
-      },
+      }
     ],
   },
   {

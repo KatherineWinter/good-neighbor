@@ -11,7 +11,7 @@ Do the following:
 - Selecting proper lighting
 - Handheld shooting
 
-1. Using motion picture shooting techniques, plan ONE of the following programs. Start with a treatment and complete the requirement by presenting this program to a pack or your troop, patrol, or class.
+1. Using motion picture shooting techniques, plan ONE of the following programs. Start with a treatment and complete the requirement by presenting this program to a pack or your neighborhood, work, or class.
 
 - Film or videotape a court of honor and show it to an audience.
 - Create a short feature of your own design, using the techniques you learned.

@@ -12,7 +12,6 @@ Option A - Using a Recurve Bow or Longbow
 - Using a recurve bow or longbow and arrows with a finger release, shoot a single round of one of the following BSA, USA Archery, or NFAA rounds:
 
 1. An NFAA field round of 14 targets and make a score of 60 points
-1. A BSA Scout field round of 14 targets and make a score of 80 points
 1. A Junior 900 round and make a score of 180 points
 1. A World Archery/USA Archery indoor\* round I and make a score of 80 points
 1. An NFAA indoor\* round and make a score of 50 points
@@ -34,7 +33,6 @@ Option A - Using a Recurve Bow or Longbow
    Using a compound bow and arrows with a finger release, shoot a single round of ONE of the following BSA, NAA,or NFAA rounds:
 
 1. An NFAA field round of 14 targets and make a score of 70 points
-1. A BSA Scout field round of 14 targets and make a score of 90 points
 1. A Junior 900 round and make a score of 200 points
 1. A World Archery/USA Archery indoor\* round I and make a score of 90 points
 1. An NFAA indoor\* round and make a score of 60 points
