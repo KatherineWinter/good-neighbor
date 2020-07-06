@@ -19,4 +19,13 @@
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 800px) {
+  .cards {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
 }
