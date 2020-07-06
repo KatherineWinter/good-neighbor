@@ -22,6 +22,25 @@ function cardsTemplate() {
   )
 }
 
+function dialogCompleteTempate() {
+  if (this.state.userData && this.state.showCompleteDialog) {
+    return (
+      <DialogComplete
+        score={this.score}
+        handleButtonClick={closeDialogComplete.bind(this)}
+      />
+    )
+  }
+
+  return null
+}
+
+function landingTempate() {
+  if (!this.state.userData && this.state.showCompleteDialog) {
+    return <Landing></Landing>
+  }
+}
+
 function closeTemplate() {
   let closeButton = null
   if (this.state.activeId) {
@@ -46,7 +65,9 @@ function pointsTemplate() {
   return (
     <Points
       text={getUserScore(merits, this.state.userData)}
-      menu={this.state.isMenuVisible ? <Menu list={this.menuList} /> : null}
+      menu={
+        this.state.isMenuVisible ? <Menu list={menuList.call(this)} /> : null
+      }
       handleClick={handlePointsClick.bind(this)}
     ></Points>
   )
@@ -93,6 +114,24 @@ function signOut(e) {
   firebaseApp.auth().signOut()
 }
 
+function menuList() {
+  let list = [
+    {
+      title: 'About',
+      callback: () => window.open('/about.html'),
+    },
+  ]
+
+  if (this.state.userData) {
+    list.push({
+      title: 'Sign out',
+      callback: signOut.bind(this),
+    })
+  }
+
+  return list
+}
+
 export default class App extends React.Component {
   constructor(props) {
     super(props)
@@ -103,17 +142,6 @@ export default class App extends React.Component {
       userData: null,
       isMenuVisible: false,
     }
-
-    this.menuList = [
-      {
-        title: 'About',
-        callback: () => window.open('/about.html'),
-      },
-      {
-        title: 'Sign out',
-        callback: signOut.bind(this),
-      },
-    ]
   }
 
   componentDidMount() {
@@ -138,25 +166,15 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (this.state.userData) {
-      const dialogComplete = this.state.showCompleteDialog ? (
-        <DialogComplete
-          score={this.score}
-          handleButtonClick={closeDialogComplete.bind(this)}
-        />
-      ) : null
-
-      return (
-        <div className="App">
-          <Border />
-          {closeTemplate.call(this)}
-          {pointsTemplate.call(this)}
-          {cardsTemplate.call(this)}
-          {dialogComplete}
-        </div>
-      )
-    }
-
-    return <Landing></Landing>
+    return (
+      <div className="App">
+        <Border />
+        {closeTemplate.call(this)}
+        {pointsTemplate.call(this)}
+        {cardsTemplate.call(this)}
+        {dialogCompleteTempate.call(this)}
+        {landingTempate.call(this)}
+      </div>
+    )
   }
 }

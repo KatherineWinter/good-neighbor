@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import firebaseApp from '@firebase/app'
 import '@firebase/auth'
-import { Points } from '../points'
-import { getCardsTemplate } from '../../utils/get-cards-template'
 import './index.scss'
 
 export class Landing extends Component {
@@ -21,28 +19,17 @@ export class Landing extends Component {
 
   render() {
     return (
-      <div className="Landing">
-        <div className="App">
-          <div className="border" />
-          <Points text={300}></Points>
-          {getCardsTemplate()}
-        </div>
-        <div className="hello">
-          <div className="hello-content">
-            <h1>Good Neighbor</h1>
-            <div>Get involved in your community</div>
-            <button className="google" onClick={this.googleSignIn.bind(this)}>
-              <img alt="google logo" src="/g-logo.png" />
-              {'Continue with Google'}
-            </button>
-            <button
-              className="facebook"
-              onClick={this.facebookSignIn.bind(this)}
-            >
-              <img alt="facebook logo" src="/f-logo.png" />
-              {'Continue with Facebook'}
-            </button>
-          </div>
+      <div className="landing">
+        <div className="landing-content">
+          <h1>Save your progress</h1>
+          <button className="google" onClick={this.googleSignIn.bind(this)}>
+            <img alt="google logo" src="/g-logo.png" />
+            {'Continue with Google'}
+          </button>
+          <button className="facebook" onClick={this.facebookSignIn.bind(this)}>
+            <img alt="facebook logo" src="/f-logo.png" />
+            {'Continue with Facebook'}
+          </button>
         </div>
       </div>
     )

@@ -1,76 +1,60 @@
-.Landing {
-  .App {
-    overflow: hidden;
-    opacity: 0.7;
-  }
+.landing {
+  color: #fff;
+  text-align: center;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #82dde2);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 
-  .hello {
-    color: #fff;
-    text-align: center;
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #82dde2);
+  .landing-content {
     position: fixed;
-    bottom: 0;
+    bottom: 20%;
     width: 100%;
-    height: 100%;
+    $textShadowColor: #b8d5ff;
 
-    .hello-content {
-      position: fixed;
-      bottom: 20%;
-      width: 100%;
-      $textShadowColor: #b8d5ff;
+    h1 {
+      font-size: 5em;
+      text-shadow: -1px -1px 0 $textShadowColor, 1px -1px 0 $textShadowColor,
+        -1px 1px 0 $textShadowColor, 1px 1px 0 $textShadowColor;
+    }
 
-      h1 {
-        font-size: 5em;
-        text-shadow: -1px -1px 0 $textShadowColor, 1px -1px 0 $textShadowColor,
-          -1px 1px 0 $textShadowColor, 1px 1px 0 $textShadowColor;
+    button {
+      display: block;
+      text-align: left;
+      cursor: pointer;
+      margin: 10px auto;
+      font-size: 1em;
+      padding: 8px;
+      background-color: #fff;
+      outline: none;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+      min-width: 250px;
+      img {
+        width: 18px;
+        height: 18px;
+        margin-right: 24px;
+        vertical-align: middle;
       }
+    }
 
-      > div {
-        font-size: 2em;
-        line-height: 1em;
-        text-shadow: -1px -1px 0 $textShadowColor, 1px -1px 0 $textShadowColor,
-          -1px 1px 0 $textShadowColor, 1px 1px 0 $textShadowColor;
-      }
+    .google {
+      color: #202124;
+    }
 
-      button {
-        display: block;
-        text-align: left;
-        cursor: pointer;
-        margin: 10px auto;
-        font-size: 1em;
-        padding: 8px;
-        background-color: #fff;
-        outline: none;
-        border: none;
-        border-radius: 4px;
-        font-family: 'Roboto', sans-serif;
-        min-width: 250px;
-        img {
-          width: 18px;
-          height: 18px;
-          margin-right: 24px;
-          vertical-align: middle;
-        }
-      }
-
-      .google {
-        color: #202124;
-      }
-
-      .facebook {
-        color: #1877f2;
-      }
+    .facebook {
+      color: #1877f2;
     }
   }
 }
 
 @media only screen and (max-width: 800px) {
   .Landing {
-    .hello {
-      .hello-content {
-        h1 {
-          line-height: 1em;
-        }
+    .landing-content {
+      h1 {
+        line-height: 1em;
       }
     }
   }
