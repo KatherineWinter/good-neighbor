@@ -36,7 +36,7 @@ function dialogCompleteTempate() {
 }
 
 function landingTempate() {
-  if (!this.state.userData && this.state.showCompleteDialog) {
+  if (!this.state.userData && this.state.showLanding) {
     return <Landing></Landing>
   }
 }
@@ -78,11 +78,17 @@ function closeDialogComplete() {
 }
 
 function handleSaveCompletion(id, score) {
-  this.score = score
-  this.setState({
-    showCompleteDialog: true,
-  })
-  handleSaveUserData.call(this, id)
+  if (this.state.userData) {
+    this.score = score
+    this.setState({
+      showCompleteDialog: true,
+    })
+    handleSaveUserData.call(this, id)
+  } else {
+    this.setState({
+      showLanding: true,
+    })
+  }
 }
 
 function handleSaveUserData(id) {
@@ -105,7 +111,10 @@ function loadUserData(userEmail) {
     data.forEach((doc) => {
       userData.push(doc.data())
     })
-    this.setState({ userData })
+    this.setState({
+      userData,
+      showLanding: false,
+    })
   })
 }
 
